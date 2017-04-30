@@ -3,13 +3,12 @@ export function counter(state, action) {
     return 0;
   }
 
-  if (action.type === 'INCREMENT') {
-    return state + 1;
+  switch(action.type) {
+    case 'INCREMENT':
+      return state + 1;
+    case 'DECREMENT':
+      return state - 1;
+    default:
+      return state;
   }
-
-  if (action.type === 'DECREMENT') {
-    return state - 1;
-  }
-
-  return state;
 }
