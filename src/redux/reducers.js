@@ -1,8 +1,4 @@
-export function counter(state, action) {
-  if (state === 'undefined') {
-    return 0;
-  }
-
+export function counter(state = 0, action) {
   switch(action.type) {
     case 'INCREMENT':
       return state + 1;
