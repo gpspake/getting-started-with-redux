@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import store from './redux/store';
 
 class App extends Component {
   render() {
+    store.subscribe(() => {
+      document.body.innerText = store.getState();
+    });
+
+    document.addEventListener('click', () => {
+      store.dispatch( { type: 'INCREMENT' } )
+    });
+
     return (
       <div className="App">
         <div className="App-header">
