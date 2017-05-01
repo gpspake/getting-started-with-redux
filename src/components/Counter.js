@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Counter extends Component {
   render() {
     return (
-      <div className="Counter">Counter</div>
+      <div className="Counter">
+        <h1>{this.props.value}</h1>
+      </div>
     );
   }
 }
