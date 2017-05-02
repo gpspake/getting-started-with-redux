@@ -28,6 +28,8 @@ class Counter extends Component {
     return (
       <div className="Counter">
         <h1>{this.props.value}</h1>
+        <button onClick={this.props.dispatchIncrement}>+</button>
+        <button onClick={this.props.dispatchDecrement}>-</button>
       </div>
     );
   }
