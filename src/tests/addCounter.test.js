@@ -1,8 +1,6 @@
 import deepFreeze from 'deep-freeze';
 
-const addCounter = (list) => {
-  return [...list, 0];
-};
+const addCounter = (list) => [...list, 0];
 
 it('adds counter', () => {
 
