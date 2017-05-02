@@ -1,4 +1,27 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import store from '../redux/store';
+
+const mapStateToProps = () => {
+  return {
+    value: store.getState()
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {
+    dispatchIncrement () {
+      store.dispatch({
+        type: 'INCREMENT'
+      })
+    },
+    dispatchDecrement () {
+      store.dispatch({
+        type: 'DECREMENT'
+      })
+    }
+  }
+};
 
 class Counter extends Component {
   render() {
@@ -10,4 +33,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
