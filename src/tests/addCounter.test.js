@@ -1,8 +1,7 @@
 import deepFreeze from 'deep-freeze';
 
 const addCounter = (list) => {
-  list.push(0);
-  return list;
+  return list.concat([0]);
 };
 
 it('adds counter', () => {
@@ -17,4 +16,3 @@ it('adds counter', () => {
 
   expect( addCounter(listBefore) ).toEqual( listAfter );
 });
-
