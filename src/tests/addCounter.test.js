@@ -10,7 +10,5 @@ it('adds counter', () => {
 
   const listAfter = [0];
 
-  console.log(addCounter);
-
   expect( addCounter(listBefore) ).toEqual( listAfter );
 });
