@@ -2,22 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import store from './redux/store';
+import Counter from './containers/CounterContainer';
+import { Provider } from 'react-redux'
 
 class App extends Component {
   render() {
-
-    const render = () => {
-      document.body.innerText = store.getState();
-    };
-
-    store.subscribe(render);
-    render();
-
-    document.addEventListener('click', () => {
-      store.dispatch( { type: 'INCREMENT' } )
-    });
-
     return (
+    <Provider store={store}>
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -26,7 +17,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Counter value={store.getState()}/>
       </div>
+    </Provider>
     );
   }
 }
