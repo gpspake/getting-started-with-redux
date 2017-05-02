@@ -1,6 +1,7 @@
 import deepFreeze from 'deep-freeze';
 
 const removeCounter = (list, index) => {
+  list.splice(index, 1);
   return list;
 };
 
