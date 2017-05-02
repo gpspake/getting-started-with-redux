@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import store from './redux/store';
-import Counter from './components/Counter';
+import Counter from './containers/CounterContainer';
 import { Provider } from 'react-redux'
 
 class App extends Component {
