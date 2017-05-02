@@ -1,6 +1,7 @@
 import deepFreeze from 'deep-freeze';
 
 const incrementCounter = (list, index) => {
+  list[index]++;
   return list;
 };
 
