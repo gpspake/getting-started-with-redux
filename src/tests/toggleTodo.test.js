@@ -3,7 +3,7 @@ import deepFreeze from 'deep-freeze';
 const toggleTodo = (todo) => {
   const completed = !todo.completed;
 
-  return Object.assign({}, todo, {completed})
+  return {...todo, completed}
 };
 
 it('toggles todo', ()=>{
