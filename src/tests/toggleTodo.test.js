@@ -1,7 +1,11 @@
 import deepFreeze from 'deep-freeze';
 
 const toggleTodo = (todo) => {
-  return todo
+  return {
+    id: todo.id,
+    text: todo.text,
+    completed: !todo.completed
+  }
 };
 
 it('toggles todo', ()=>{
