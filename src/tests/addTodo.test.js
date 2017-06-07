@@ -1,20 +1,7 @@
 import deepFreeze from 'deep-freeze';
+import { todos } from '../redux/reducers'
 
 it('adds todo', () => {
-
-  const todos = (state = [], action) => {
-    switch (action.type) {
-      case 'ADD_TODO':
-        return [
-          ...state,
-          {
-            id: action.id,
-            text: action.text,
-            completed: false
-          }
-        ]
-    }
-  }
 
   const stateBefore = [];
 
